@@ -1,0 +1,58 @@
+/* 公共样式 */
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration:none;
+    color: #000;
+    font-size: 13px;
+}
+
+a:hover {
+	color: #f01414;
+}
+
+.c:after {
+	content: '';
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	zoom: 1;
+}
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.red {
+	color: red;
+}
+
+select,
+input {
+	margin: 0;
+	border: none;
+	outline: none;
+}

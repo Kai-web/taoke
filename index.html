@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>淘客电商网页布局</title>
+	<link rel="stylesheet" href="CSS/reset.css">
+	<link rel="stylesheet" href="CSS/common.css">
+	<link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+	<header class="header" id="header">
+		<a href="#" name="dingbu"></a>
+		<div class="wrap c">
+
+			<!-- 顶部左边 -->
+			<div class="header-left c">
+				<p>
+					<a class="loginLink" style="color: #ff0000;" href="#">亲，请登录</a>
+					<a class="reginLink" href="#">免费注册</a>
+					<a href="#">手机逛淘客</a>
+				</p>
+			</div>
+
+
+			<!-- 顶部右边 -->
+			<div class="header-right">
+				<ul class="header-right-contai">
+					<li class="dropdown-item c">
+						<a href="#" class="dropdown-box">我的淘客<i class="iconfont"></i></a>
+						<ul class="dropdown-content">
+							<li><a class="dropdown-content-item" href="#">已买到的宝贝</a></li>
+							<li><a class="dropdown-content-item" href="#">我的足迹</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-item c">
+						<a href="#" class="dropdown-box">收藏夹<i class="iconfont"></i></a>
+						<ul class="dropdown-content">
+							<li><a class="dropdown-content-item" href="#">收藏的宝贝</a></li>
+							<li><a class="dropdown-content-item" href="#">收藏的店铺</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-item c">
+						<a href="#">商品分类<i class="iconfont"></i></a>
+					</li>
+					<li class="dropdown-item c">
+						<a href="#" class="dropdown-box">卖家中心<i class="iconfont"></i></a>
+						<ul class="dropdown-content">
+							<li><a class="dropdown-content-item" href="#">免费开店</a></li>
+							<li><a class="dropdown-content-item" href="#">已卖出的宝贝</a></li>
+							<li><a class="dropdown-content-item" href="#">出售中的宝贝</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-item c">
+						<a href="#" class="dropdown-box">联系客服<i class="iconfont"></i></a>
+						<ul class="dropdown-content">
+							<li><a class="dropdown-content-item" href="#">卖家客服</a></li>
+							<li><a class="dropdown-content-item" href="#">消费者客服</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+
+	<!-- 登陆注册弹出层 -->
+	<div class="layer-mask"></div>
+	<div class="layer-pop">
+		<div class="layer-close">x</div>
+		<h4 class="title loginLink focus">登录</h4>
+		<h4 class="title reginLink register">注册</h4>
+		<div class="layer-content"></div>
+	</div>
+
+
+	<!-- 登录 -->
+	<div class="loginHtml" style="display: none;">
+		<div class="login">
+			<div class="item">
+				<input type="text" class="text" name="username" placeholder="请输入登陆邮箱/手机号" />
+			</div>
+			<p class="error"></p>
+			<div class="item">
+				<input type="password" class="password" name="password" placeholder="5-16位密码,区分大小写,不能用空格" />
+			</div>
+			<p class="denglu">
+				<input type="checkbox" name="radio" class="radio" checked="true" />下次自动登录
+				<a href="#0">忘记密码？</a>
+			</p>
+			<div class="item">
+				<input type="submit" class="submit" value="提交" />
+			</div>
+			<div class="thirdly c">
+				<a href="https://login.sina.com.cn/signup/signin.php" target="_blank" class="xinlang">
+					<img src="img/新浪.png">
+				</a>
+				<a href="https://wx.qq.com/" target="_blank" class="weixin">
+					<img src="img/微信.png">
+				</a>
+				<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&state=authorize&client_id=101135748&redirect_uri=https%3A%2F%2Fpassport.bilibili.com%2Flogin%2Fsnsback%3Fsns%3Dqq_bind%26state%3D8e77fa5215a91db8d25c3fc6e0125f7f&scope=do_like,get_user_info,get_simple_userinfo,get_vip_info,get_vip_rich_info,add_one_blog,list_album,upload_pic,add_album,list_photo,get_info,add_t,del_t,add_pic_t,get_repost_list,get_other_info,get_fanslist,get_idollist,add_idol,del_idol,get_tenpay_addr/"
+					target="_blank" class="qq">
+					<img src="img/qq.png">
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 注册 -->
+	<div class="reginHtml" style="display: none;">
+		<div class="regin">
+			<div class="item">
+				<input type="text" class="text" name="username" placeholder="请输入登陆邮箱/手机号" />
+			</div>
+			<div class="item">
+				<input type="password" class="password" name="password" placeholder="5-16位密码,区分大小写,不能用空格" />
+			</div>
+			<div class="item">
+				<input type="password" class="repassword" name="repassword" placeholder="请再次输入密码" />
+			</div>
+			<div class="item">
+				<input type="submit" class="submit" value="注册" />
+			</div>
+			<div class="thirdly c">
+				<a href="https://login.sina.com.cn/signup/signin.php" target="_blank" class="xinlang">
+					<img src="img/新浪.png">
+				</a>
+				<a href="https://wx.qq.com/" target="_blank" class="weixin">
+					<img src="img/微信.png">
+				</a>
+				<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&state=authorize&client_id=101135748&redirect_uri=https%3A%2F%2Fpassport.bilibili.com%2Flogin%2Fsnsback%3Fsns%3Dqq_bind%26state%3D8e77fa5215a91db8d25c3fc6e0125f7f&scope=do_like,get_user_info,get_simple_userinfo,get_vip_info,get_vip_rich_info,add_one_blog,list_album,upload_pic,add_album,list_photo,get_info,add_t,del_t,add_pic_t,get_repost_list,get_other_info,get_fanslist,get_idollist,add_idol,del_idol,get_tenpay_addr/"
+					target="_blank" class="qq">
+					<img src="img/qq.png">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- logo -->
+	<section id="logo" class="logo">
+		<div class="wrap c">
+			<div class="logos">
+				<img src="img/logo.jpg" />
+			</div>
+			<div class="search">
+				<input type="text" name="" class="sousuo" value="" placeholder="秋装2020新款爆款" /><input type="submit"
+					name="" class="submit" value="搜索" />
+			</div>
+			<div class="shop">
+				<div class="shopping">
+					<p>
+						<i class="cat1"></i>
+						<span id="">购物车&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span>0</span>
+						<i class="cat2"></i>
+					</p>
+				</div>
+				<div class="shop-content">
+					<div>
+						<h3>最近加入的商品</h3>
+					</div>
+					<div class="shop-content-item">
+						<img src="img/1.png" alt="" />
+						<p>阿迪达斯 训练 男子上衣</p>
+						<span>￥335x1</span>
+						<a href="#"><img class="arror20" src="img/20.png" /></a>
+					</div>
+					<div class="shop-content-item">
+						<img src="img/2.png" alt="" />
+						<p>雅诗兰黛 洁面套装</p>
+						<span>￥888x1</span>
+						<a href="#"><img class="arror20" src="img/20.png" /></a>
+					</div>
+					<div class="shop-content-item">
+						<img src="img/3.png" alt="" />
+						<p>iPhone6</p>
+						<span>￥4288x1</span>
+						<a href="#"><img class="arror20" src="img/20.png" /></a>
+					</div>
+					<div class="shop-down c">
+						<p>共<span id="num">4</span>件商品 共计￥<span>0.00</span></p>
+						<a href="#">去购物车</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- 左侧导航 -->
+	<nav class="nav" id="nav">
+		<div class="wrap c">
+			<!-- 横向主导航 -->
+			<div class="mainnav">
+				<a href="#0">数码城</a>
+				<a href="#0">电器城</a>
+				<a href="#0">惠抢购</a>
+				<a href="#0">团购</a>
+				<a href="#0">二手特价</a>
+				<a href="#0">名品汇</a>
+			</div>
+
+			<!-- 商品分类菜单列表 -->
+			<div class="menu">
+				<h4><i class="cat3"></i><a href="#0">商品分类</a></h4>
+				<p class="menu-item"> 家用电器 <span>></span></p>
+				<p class="menu-item"> 手机、运营商、数码<span>></span></p>
+				<p class="menu-item"> 电脑、办公<span>></span></p>
+				<p class="menu-item"> 家居、家具、家装、厨具<span>></span></p>
+				<p class="menu-item"> 男装、女装、童装、内衣 <span>></span></p>
+				<p class="menu-item"> 化妆、清洁、宠物<span>></span></p>
+				<p class="menu-item"> 运动户外、钟表<span>></span></p>
+				<p class="menu-item"> 汽车、汽车用品<span>></span></p>
+				<p class="menu-item"> 母婴、玩具乐器<span>></span></p>
+				<p class="menu-item"> 食品、酒类、生鲜、特产<span>></span></p>
+				<p class="menu-item"> 医药保健<span>></span></p>
+				<p class="menu-item"> 图书、音像、电子书<span>></span></p>
+				<p class="menu-item"> 彩票、旅行、充值、票务<span>></span></p>
+				<p class="menu-item"> 理财、众筹、白条、保险<span>></span></p>
+			</div>
+
+			<!-- 商品导航内部内容 -->
+			<div class="menu-box c">
+				<div class="menu-box-content c">
+					<div class="menu-box-content-item">
+						<div class="title1">家电馆、乡镇专卖店</div>
+						<div class="sub-row">
+							<span class="bold mr10">电视：</span>
+							<a href="">曲面电视</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">超清电视</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">超薄电视</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">空调：</span>
+							<a href="">柜式空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">壁挂式空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">变频空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">节能空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">以旧换新</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">洗衣机：</span>
+							<a href="">单筒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">滚筒式洗衣机</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">波轮式洗衣机</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">冰箱：</span>
+							<a href="">多门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">单门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">双门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">冷柜</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">小家电：</span>
+							<a href="">豆浆机</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">电烤箱</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">面包机</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">洗碗机</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">手机、运营商</div>
+						<div class="sub-row">
+							<span class="bold mr10">手机：</span>
+							<a href="">华为</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">小米</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">三星</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">运营商：</span>
+							<a href="">移动</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">电信</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">联通</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">铁通</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">大王卡</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">电脑、办公</div>
+						<div class="sub-row">
+							<span class="bold mr10">电脑：</span>
+							<a href="">台式</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">笔记本</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">一体机</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">硬盘：</span>
+							<a href="">固态</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">三星</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">联想</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">希捷</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">金士顿</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">鼠标：</span>
+							<a href="">联想</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">小米</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">西博</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">键盘：</span>
+							<a href="">机械</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">西门子</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">双飞燕</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">雷柏</a>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">家居、家具</div>
+						<div class="sub-row">
+							<span class="bold mr10">热卖推荐：</span>
+							<a href="">羽绒被</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">四件套</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">蚕丝被</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">空调：</span>
+							<a href="">柜式空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">壁挂式空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">变频空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">节能空调</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">以旧换新</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">家纺：</span>
+							<a href="">枕头</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">电热毯</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">浴巾</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">生活日用：</span>
+							<a href="">浴室用品</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">洗晒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">雨伞雨具</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">收纳箱</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">家装：</span>
+							<a href="">装饰字画</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">装饰摆件</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">壁饰</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">创意家居 </a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">男装、女装</div>
+						<div class="sub-row">
+							<span class="bold mr10">热门分类：</span>
+							<a href="">夹克</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">休闲裤</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">衬衫</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">男士外套：</span>
+							<a href="">新品夹克</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">牛仔外套</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">风衣</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">西服</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">棒球服</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">女装：</span>
+							<a href="">商场同款</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">春节新品</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">自营女装</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">女士外套：</span>
+							<a href="">短款羽绒服</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">皮草外套</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">宽松卫衣</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">羽绒马甲</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">国际名牌：</span>
+							<a href="">FLA</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">HAZZYS</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">23区</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">梦舒雅</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">化妆、清洁</div>
+						<div class="sub-row">
+							<span class="bold mr10">当季主推：</span>
+							<a href="">美妆馆</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">美白</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">控油</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">拔草推荐：</span>
+							<a href="">明星同款</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">显白口红</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">小美盒</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">潮流速递：</span>
+							<a href="">新品</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">精选礼盒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">潮流风向</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">冰箱：</span>
+							<a href="">多门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">单门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">双门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">冷柜</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">面部护肤：</span>
+							<a href="">护肤礼盒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">深层清洁</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">敏感肌</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">卸妆</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">运动户外、钟表</div>
+						<div class="sub-row">
+							<span class="bold mr10">运动热门购：</span>
+							<a href="">跑步鞋</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">体育用品</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">冲锋衣</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">运动鞋包：</span>
+							<a href="">休闲鞋</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">运动包</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">专项运动鞋</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">帆布鞋</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">训练鞋</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">运动服饰：</span>
+							<a href="">T恤</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">运动套装</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">健身服</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">户外鞋服：</span>
+							<a href="">户外风衣</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">徒步鞋</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">速干衣裤</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">军迷服饰</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">户外装备：</span>
+							<a href="">望远镜</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">帐篷</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">户外照明</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">便携式桌椅床</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">汽车、汽车用品</div>
+						<div class="sub-row">
+							<span class="bold mr10">热卖：</span>
+							<a href="">机油</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">轮胎</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">汽车坐垫</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">乘用车：</span>
+							<a href="">二手车</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">分期购车</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">丰田</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">奥迪</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">五菱</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">车载电器：</span>
+							<a href="">行车记录仪</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">车载充电器</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">车载导航</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">维护保养：</span>
+							<a href="">汽机油</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">添加剂</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">防冻液</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">蓄电池</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">美容清洗：</span>
+							<a href="">洗车机</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">玻璃水</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">清洁剂</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">车蜡</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">母婴、玩具乐器</div>
+						<div class="sub-row">
+							<span class="bold mr10">母婴馆：</span>
+							<a href="">猪猪宝贝</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">美赞臣</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">爱他美</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">品牌街：</span>
+							<a href="">雅马哈</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">那妮仁</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">葡萄科技</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">瑞贝乐</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">美乐</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">亲子服务：</span>
+							<a href="">专项课包</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">少儿安心险</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">私户月子服务</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">奶粉：</span>
+							<a href="">1段</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">2段</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">3段</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">4段</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">营养辅食：</span>
+							<a href="">益生菌</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">米粉、菜粉</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">宝宝零食</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">DHA</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">食品、酒类</div>
+						<div class="sub-row">
+							<span class="bold mr10">酒品馆：</span>
+							<a href="">白酒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">葡萄酒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">啤酒</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">调酒频道：</span>
+							<a href="">特制鸡尾酒</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">诱惑的街</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">魔力普</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">君度</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">凯善</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">探酒圈：</span>
+							<a href="">商尼酒庄</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">百加得</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">威士忌</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">中外名酒：</span>
+							<a href="">茅台</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">百威</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">青岛</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">雪花</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">水：</span>
+							<a href="">纯净水</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">苏打水</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">矿泉水</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">气泡水</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">医药保健</div>
+						<div class="sub-row">
+							<span class="bold mr10">补肾壮阳：</span>
+							<a href="">汇仁</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">白云山</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">同仁堂</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">补气养血：</span>
+							<a href="">福胶</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">童一堂</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">东阿阿胶</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">吉林敖东</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">天草</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">肠胃消化：</span>
+							<a href="">舒尔佳</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">艾丽</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">达喜</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">风湿骨外伤：</span>
+							<a href="">白云山</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">鸿毛</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">奇正</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">科宏</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">维生素：</span>
+							<a href="">爱乐维</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">力度伸</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">迪巧</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">钙尔奇</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">图书、影像</div>
+						<div class="sub-row">
+							<span class="bold mr10">图书：</span>
+							<a href="">畅销榜</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">新书榜</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">书单</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">文娱：</span>
+							<a href="">进口CD</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">内地流行</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">华语流行</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">欧美流行</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">亲子幼教</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">教育：</span>
+							<a href="">职业培训</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">出国留学</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">学历教育</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">语音培训：</span>
+							<a href="">英语</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">日语</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">汉语</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">其它</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">成人考试考证：</span>
+							<a href="">学历考试</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">研究僧考试</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">公职类考试</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">财经金融考试</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">机票、充值</div>
+						<div class="sub-row">
+							<span class="bold mr10">飞机票：</span>
+							<a href="">特快</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">经济舱</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">一等舱</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">充值：</span>
+							<a href="">移动充值</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">电费充值</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">网费充值</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">虚拟游戏充值</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">燃气费充值</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-box-content">
+					<div class="menu-box-content-item">
+						<div class="title1">金融、白条</div>
+						<div class="sub-row">
+							<span class="bold mr10">理财：</span>
+							<a href="">小金库</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">基金理财</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">定期理财</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">众筹：</span>
+							<a href="">流行文化</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">智能硬件</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">公益</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">生活美学</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">其它</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">慕家</span>
+							<a href="">固收类</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">私募</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">公募</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">冰箱：</span>
+							<a href="">多门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">单门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">双门</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">冷柜</a>
+						</div>
+						<div class="sub-row">
+							<span class="bold mr10">白条：</span>
+							<a href="">联名卡</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">白条免息</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">白条分期</a>
+							<span class="ml10 mr10">/</span>
+							<a href="">白条券</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- banner -->
+	<section class="banner c" id="banner">
+		<div class="wrap c">
+			<!-- 轮播图 -->
+			<div class="banner-rotation c">
+				<div class="banner-slide active c">
+					<a href="#1">
+						<img src="img/1.jpg" />
+					</a>
+				</div>
+				<div class="banner-slide ">
+					<a href="#1">
+						<img src="img/4.jpg" />
+					</a>
+				</div>
+				<div class="banner-slide ">
+					<a href="#1">
+						<img src="img/5.jpg" />
+					</a>
+				</div>
+				<!-- 左右切换按钮 -->
+				<a href="javascrit:void(0)" class="prev">
+					<img src="img/pre2.png" />
+				</a>
+				<a href="javascript:void(0)" class="next">
+					<img src="img/pre.png" />
+				</a>
+				<!-- 小圆点 -->
+				<div class="dots">
+					<span class="focus"></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<!-- 右侧新闻栏 -->
+			<div class="sidebar">
+				<div class="news">
+					<p class="c">
+						<h5 class="red">慕快报</h5><a href="#0" class="more">更多</a>
+					</p>
+					<p><b>【特惠】</b><a href="#0">精选图书满150减60</a></p>
+					<p><b>【公告】</b><a href="#0">因广州图书仓库升级配送延迟</a></p>
+					<p><b>【特惠】</b><a href="#0">爆款手机12期免息 抽奖赢电视</a></p>
+					<p><b>【公告】</b><a href="#0">广州、福建受台风影响配送延迟</a></p>
+					<p><b>【特惠】</b><a href="#0">大闸蟹领券满399减180</a></p>
+				</div>
+				<!-- 便捷服务 -->
+				<div class="serve">
+					<table>
+						<tr>
+							<td>
+								<a href=""><img src="img/icon/1.png" />话费</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/2.png" />机票</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/3.png" />电影票</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/4.png" />游戏</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href=""><img src="img/icon/5.png" />彩票</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/6.png" />加油卡</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/7.png" />酒店</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/8.png" />火车票</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href=""><img src="img/icon/9.png" />众筹</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/10.png" />理财</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/11.png" />礼品卡</a>
+							</td>
+							<td>
+								<a href=""><img src="img/icon/12.png" />白条</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 广告图片 -->
+				<div class="ad">
+					<img src="img/tuijian.png" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 横向滚动区 -->
+	<section class="today" id="today">
+		<div class="wrap">
+			<div class="today-box" id="today-box">
+				<div class="today-product c" id="today-product">
+					<a href="" class="product-item">
+						<img src="img/todays/1.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/2.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/3.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/4.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/5.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/6.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/7.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/8.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/9.jpg" />
+					</a>
+					<a href="" class="product-item">
+						<img src="img/todays/10.jpg" />
+					</a>
+				</div>
+
+				<a href="javascrit:void(0)" class="prev">
+				</a>
+				<a href="javascript:void(0)" class="next">
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- 商品展示楼层 -->
+	<section id="main">
+		<div class="wrap">
+			<div class="commond">
+				<section class="commond-region">
+					<div class="commond-caption">
+						<span>1F</span>
+						<span>服装鞋包</span>
+					</div>
+					<ul class="commond-toggle">
+						<li>
+							<a href="javascript:;" class="toggle-caption big-name">大牌</a>
+							<ul class="commond-content active">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/1.png" />
+											<p>户外旅行背包</p>
+											<span class="red">379￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/2.png"/>
+											<p>旅行多功能背包</p>
+											<span class="red">279￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/3.png"/>
+											<p>琐细涉水户外鞋</p>
+											<span class="red">719￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/4.png"/>
+											<p>轻薄羽绒服2015新款</p>
+											<span class="red">179￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/5.png"/>
+											<p>探路者户外徒步鞋</p>
+											<span class="red">339￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/6.png"/>
+											<p>战地吉普三合一冲锋衣</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/7.png"/>
+											<p>足球训练防寒防风手套</p>
+											<span class="red">47￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/8.png"/>
+											<p>特步官方运动套</p>
+											<span class="red">119￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/9.png"/>
+											<p>NBA半毛圈高筒棉袜</p>
+											<span class="red">19￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/10.png"/>
+											<p>必迈一体跑步T恤</p>
+											<span class="red">79￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">179￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/2/12.png"/>
+											<p>匡威男棒球开衫外套2017</p>
+											<span class="red">329￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption mens">男装</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/1.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">306￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">421￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">360￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">420￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">377￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">340￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">289￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">427￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">355￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">361￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/1/12.png"/>
+											<p>耐克防晒服男士户外超薄速干风衣</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption womens">女装</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/1.png"/>
+											<p>桑蚕丝显瘦中长款连衣裙</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/1/3/12.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<!-- 二层 -->
+				<section class="commond-region">
+					<div class="commond-caption">
+						<span>2F</span>
+						<span>个护美妆</span>
+					</div>
+					<ul class="commond-toggle">
+						<li>
+							<a href="javascript:;" class="toggle-caption big-name">热门</a>
+							<ul class="commond-content active">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/2/3/1.png"/>
+                                        <p>韩束鲜活水盈保湿霜</p>
+                                        <span class="red">159￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/2.png"/>
+                                        <p>温碧泉八杯水水润5件套</p>
+                                        <span class="red">198￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/3.png"/>
+                                        <p>御泥坊红酒蚕丝面膜贴</p>
+                                        <span class="red">79.9￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/4.png"/>
+                                        <p>吉列手动剃须刀锋隐致护</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/5.png"/>
+                                        <p>Mediheal水润保湿面膜</p>
+                                        <span class="red">228￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/6.png"/>
+                                        <p>珀莱雅新柔皙莹润套装</p>
+                                        <span class="red">119￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/7.png"/>
+                                        <p>纳益其尔芦荟舒缓保湿凝胶</p>
+                                        <span class="red">39￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/8.png"/>
+                                        <p>宝拉珍选基础护肤旅行四件套</p>
+                                        <span class="red">299￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/9.png"/>
+                                        <p>温碧泉透芯润五件套装</p>
+                                        <span class="red">257￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/10.png"/>
+                                        <p>玉兰油多效修护三部曲套装</p>
+                                        <span class="red">199￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/11.png"/>
+                                        <p>LOREAL火山岩控油清痘洁面膏</p>
+                                        <span class="red">36￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/3/12.png"/>
+                                        <p>百雀羚水嫩倍现盈透精华水</p>
+                                        <span class="red">139￥</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="toggle-caption mens">国际大牌</a>
+                        <ul class="commond-content">
+                            <li>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/1.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/2.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/3.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/4.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/5.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/6.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/7.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/8.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/9.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/10.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/11.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/2/12.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="toggle-caption womens">国际名品</a>
+                        <ul class="commond-content">
+                            <li>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/1.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/2.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/3.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/4.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/5.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/6.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/7.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/8.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/9.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/10.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/11.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/2/1/12.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="commond-region">
+					<div class="commond-caption">
+						<span>3F</span>
+						<span>手机通讯</span>
+					</div>
+					<ul class="commond-toggle">
+						<li>
+							<a href="javascript:;" class="toggle-caption big-name">热门</a>
+							<ul class="commond-content active">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/3/1/1.png"/>
+                                        <p>摩托罗拉 Moto Z Play</p>
+                                        <span class="red">3999￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/2.png"/>
+                                        <p>Apple iPhone 7 (A1660)</p>
+                                        <span class="red">6188￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/3.png"/>
+                                        <p>小米5 全网通 标准版 3GB内存</p>
+                                        <span class="red">1999￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/4.png"/>
+                                        <p>小米 Note 全网通 白色</p>
+                                        <span class="red">999￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/5.png"/>
+                                        <p>荣耀7i 海岛蓝 移动联通4G手机</p>
+                                        <span class="red">1099￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/6.png"/>
+                                        <p>乐视（Le）乐2（X620）32GB</p>
+                                        <span class="red">1099￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/7.png"/>
+                                        <p>OPPO R9 4GB+64GB内存版</p>
+                                        <span class="red">2499￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/8.png"/>
+                                        <p>魅蓝note3 全网通公开版</p>
+                                        <span class="red">899￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/9.png"/>
+                                        <p>飞利浦 X818 香槟金 全网通4G</p>
+                                        <span class="red">1998￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/10.png"/>
+                                        <p>三星 Galaxy S7（G9300）</p>
+                                        <span class="red">4088￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/11.png"/>
+                                        <p>华为 荣耀7 双卡双待双通</p>
+                                        <span class="red">1128￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/1/12.png"/>
+                                        <p>努比亚(nubia)Z7Max(NX505J)</p>
+                                        <span class="red">728</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="toggle-caption mens">品质优选</a>
+                        <ul class="commond-content">
+                            <li>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/1.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/2.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/3.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/4.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/5.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/6.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/7.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/8.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/9.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/10.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/11.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/2/12.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="toggle-caption womens">新机尝鲜</a>
+                        <ul class="commond-content">
+                            <li>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/1.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/2.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/3.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/4.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/5.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/6.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/7.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/8.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/9.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/10.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/11.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+                                <div class="main-goods">
+                                    <a href="#0">
+                                        <img src="img/goods/3/3/12.png"/>
+                                        <p>匡威男装外套2018新款</p>
+                                        <span class="red">479￥</span>
+                                    </a>
+                                </div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<!-- 四楼 -->
+				<section class="commond-region">
+					<div class="commond-caption">
+						<span>4F</span>
+						<span>家用电器</span>
+					</div>
+					<ul class="commond-toggle">
+						<li>
+							<a href="javascript:;" class="toggle-caption big-name">热门</a>
+							<ul class="commond-content active">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/1.png"/>
+											<p>暴风TV 超体电视 40X 40英寸</p>
+											<span class="red">1299￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/2.png"/>
+											<p>小米（MI）L55M5-AA 55英寸</p>
+											<span class="red">3699￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/3.png"/>
+											<p>飞利浦HTD5580/93 音响</p>
+											<span class="red">2999￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/4.png"/>
+											<p>金门子H108 5.1套装音响组合</p>
+											<span class="red">1198￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/5.png"/>
+											<p>方太ENJOY云魔方抽油烟机</p>
+											<span class="red">4390￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/6.png"/>
+											<p>美的60升预约洗浴电热水器</p>
+											<span class="red">1099￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/7.png"/>
+											<p>九阳电饭煲多功能智能电饭锅</p>
+											<span class="red">159￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/8.png"/>
+											<p>美的电烤箱家用大容量</p>
+											<span class="red">329￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/9.png"/>
+											<p>奥克斯(AUX)936破壁料理机</p>
+											<span class="red">1599￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/10.png"/>
+											<p>飞利浦面条机 HR2356/31</p>
+											<span class="red">665￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/11.png"/>
+											<p>松下NU-JA100W 家用蒸烤箱</p>
+											<span class="red">1799￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/1/12.png"/>
+											<p>飞利浦咖啡机 HD7751/00</p>
+											<span class="red">1299￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption mens">大家电</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/1.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/2/12.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption womens">生活电器</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/1.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/4/3/12.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<!-- 五楼 -->
+				<section class="commond-region">
+					<div class="commond-caption">
+						<span>5F</span>
+						<span>电脑数码</span>
+					</div>
+					<ul class="commond-toggle">
+						<li>
+							<a href="javascript:;" class="toggle-caption big-name">热门</a>
+							<ul class="commond-content active">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/1.png">
+											<p>戴尔成就Vostro 3800-R6308</p>
+											<span class="red">2999￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/2.png">
+											<p>联想IdeaCentre C560</p>
+											<span class="red">5399￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/3.png">
+											<p>惠普260-p039cn台式电脑</p>
+											<span class="red">3099￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/4.png">
+											<p>华硕飞行堡垒旗舰版FX-PRO</p>
+											<span class="red">6599￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/5.png">
+											<p>惠普(HP)暗影精灵II代PLUS</p>
+											<span class="red">12999￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/6.png">
+											<p>联想(Lenovo)小新700电竞版</p>
+											<span class="red">5999￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/7.png">
+											<p>游戏背光牧马人机械手感键盘</p>
+											<span class="red">499￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/8.png">
+											<p>罗技iK1200背光键盘保护套</p>
+											<span class="red">799￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/9.png">
+											<p>西部数据2.5英寸移动硬盘1TB</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/10.png">
+											<p>新睿翼3TB 2.5英寸 移动硬盘</p>
+											<span class="red">849￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/11.png">
+											<p>Rii mini i28无线迷你键盘鼠标</p>
+											<span class="red">349￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/1/12.png">
+											<p>罗技G29 力反馈游戏方向盘</p>
+											<span class="red">2999￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption mens">电脑/平板</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/1.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/2/12.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;" class="toggle-caption womens">潮流/影音</a>
+							<ul class="commond-content">
+								<li>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/1.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/2.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/3.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/4.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/5.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/6.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/7.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/8.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/9.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/10.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/11.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+									<div class="main-goods">
+										<a href="#0">
+											<img src="img/goods/5/3/12.png"/>
+											<p>匡威男装外套2018新款</p>
+											<span class="red">479￥</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<!-- 左侧楼层导航 -->
+				<nav class="left-storey" id="left-storey">
+					<ul class="storey-nav">
+						<li class="navigation">1F</li>
+						<li class="navigation">2F</li>
+						<li class="navigation">3F</li>
+						<li class="navigation">4F</li>
+						<li class="navigation">5F</li>
+					</ul>
+				</nav>
+
+				<!-- 右侧导航 -->
+				<nav class="tool-bar" id="tool-bar">
+					<ul class="tool-bar-content">
+						<li class="tool-bar-item c">
+							<a href="#0" class="tab-text fl">慕淘会员</a>
+							<i class="tab-icon fr"></i>
+						</li>
+						<li class="tool-bar-item c">
+							<a href="#0" class="tab-text fl">购物车</a>
+							<i class="tab-icon fr"></i>
+						</li>
+						<li class="tool-bar-item c">
+							<a href="#0" class="tab-text fl">我的关注</a>
+							<i class="tab-icon fr"></i>
+						</li>
+						<li class="tool-bar-item c">
+							<a href="#0" class="tab-text fl">我的消息</a>
+							<i class="tab-icon fr"></i>
+						</li>
+						<li class="tool-bar-item c">
+							<a href="javascript:;" class="tab-text backTop fl">返回顶部</a>
+							<a href="javascript:;" class="tab-icon backTop fr"></a>
+						</li>
+					</ul>
+				</nav>
+
+
+				<!-- 底部导航 -->
+				<section id="friendLink" class="friendLink wrap c">
+					<div>
+						<dl>
+							<dt>消费保障</dt>
+							<dd><a href="#1">保障范围</a></dd>
+							<dd><a href="#2">退货退款</a></dd>
+							<dd><a href="#3">服务中心</a></dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt>新手上路</dt>
+							<dd><a href="#1">新手专区</a></dd>
+							<dd><a href="#2">消费警示</a></dd>
+							<dd><a href="#3">交易安全</a></dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt>帮助中心</dt>
+							<dd><a href="#1">账户管理</a></dd>
+							<dd><a href="#2">购物指南</a></dd>
+							<dd><a href="#3">订单操作</a></dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt>关于我们</dt>
+							<dd><a href="#1">了解我们</a></dd>
+							<dd><a href="#2">加入我们</a></dd>
+							<dd><a href="#3">更多服务</a></dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt>关注我们</dt>
+							<dd><a href="#1">新浪微博</a></dd>
+							<dd><a href="#2">官方微信</a></dd>
+							<dd><a href="#3">联系我们</a></dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt>服务支持</dt>
+							<dd><a href="#1">售后政策</a></dd>
+							<dd><a href="#2">自助服务</a></dd>
+							<dd><a href="#3">相关下载</a></dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- 页脚 -->
+				<footer class="footer" id="footer">
+					<p>
+						<a href="#0">关于我们</a>
+						<a href="#0">合作伙伴</a>
+						<a href="#0">营销中心</a>
+						<a href="#0">廉政举报</a>
+						<a href="#0">联系客服</a>
+						<a href="#0">开放平台</a>
+						<a href="#0">加入我们</a>
+						<a href="#0">联系我们</a>
+						<a href="#0">网站地图</a>
+						<a href="#0">法律声明</a>
+						<a href="#0">知识产权</a>
+					</p>
+					<p>Copyright © 2020 xxxxx.com All Rights Reserved | 京ICP备 12345678号-10</p>
+				</footer>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
